@@ -1,0 +1,23 @@
+
+type User { # implements Node {
+    id: ID! # @uniq(uuid: true)
+    name: String!
+    photo: Picture
+}
+
+type Picture { # implements Node {
+    id: ID!
+    url: String!
+}
+
+# interface Node {
+#     id: ID!
+# }
+
+# fragment Avatar on User {
+#     id
+#     name
+#     photo {
+#         url
+#     }
+# }

@@ -1,0 +1,37 @@
+import (
+    "./state"
+    "./"
+)
+
+component QuantumComponent
+
+@connect(counterStore: CounterStore)
+@on(user: User)
+# test
+{
+    button(class: "test")
+        @on(click: $counterStore) {
+        "Reset"
+    }
+    div {
+        img(
+            src: "http://test.com"
+        )
+        "Quanty Lang \" test \" "
+    }
+    p {
+        span {
+            "test test"
+        }
+        "Counter : $counterStore.count \n $"
+    }
+    div(class: "row") {
+        button(class: "primary") @on(click: $counterStore.decrement) {
+            "Increment"
+        }
+        button(class: "secondary")
+            @on(click: $counterStore.decrement) {
+            "Decrement"
+        }
+    }
+}

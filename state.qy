@@ -1,0 +1,11 @@
+store CounterStore {
+    counter: Int = 0
+    
+    increment: fun {
+        counter + 1
+    }
+
+    decrement: fun {
+        counter - 1 
+    }
+}
